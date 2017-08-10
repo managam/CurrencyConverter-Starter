@@ -9,6 +9,7 @@ EStyleSheet.build({
   $white: "#fff",
   $border: "#e2e2e2",
   $inputText: "#797979",
+  $darkText: "#343434",
   $lightGray: "#f0f0f0"
 });
 
