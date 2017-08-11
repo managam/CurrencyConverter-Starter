@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from "react";
-import { ScrollView, StatusBar, Platform } from "react-native";
+import { ScrollView, StatusBar, Platform, Linking } from "react-native";
 import { ListItem, Separator } from "../components/List";
 import { Ionicons } from "@expo/vector-icons";
 
 const ICON_PREFIX = Platform.OS === "ios" ? "ios" : "md";
 const ICON_COLOR = "#868686";
 const ICON_SIZE = 23;
+const URL = "http://fixer.io";
 
 class Options extends Component {
   static propTypes = {
@@ -17,7 +18,7 @@ class Options extends Component {
   };
 
   handleSitePress = () => {
-    console.log("Press site");
+    Linking.openURL(URL).catch(() => alert("An error occured"));
   };
 
   render() {
