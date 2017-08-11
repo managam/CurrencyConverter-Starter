@@ -5,6 +5,7 @@ import EStyleSheet from "react-native-extended-stylesheet";
 //import Options from "./screens/Options";
 //import Themes from "./screens/Themes";
 import Navigator from "./config/routes";
+import { AlertProvider } from "./components/Alert";
 
 EStyleSheet.build({
   $primaryBlue: "#4F6D7A",
@@ -19,4 +20,7 @@ EStyleSheet.build({
   $lightGray: "#f0f0f0"
 });
 
-export default () => <Navigator />;
+export default () =>
+  <AlertProvider>
+    <Navigator />
+  </AlertProvider>;
